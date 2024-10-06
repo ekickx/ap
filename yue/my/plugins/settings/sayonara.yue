@@ -1,9 +1,0 @@
-Unmap
-  mode: "n", keys: { "<Leader>bx" }
-
-Map
-  * mode: "n", keys: "<Leader>bx", run: ":Sayonara!<CR>"
-    opt: desc: "Close buffer and preserves window"
-
-  * mode: "n", keys: "<Leader>bxx", run: ":Sayonara<CR>"
-    opt: desc: "Close buffer and window"

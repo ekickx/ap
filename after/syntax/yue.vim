@@ -1,1 +1,0 @@
-../../vendors/yuescript-vim/syntax/yue.vim

@@ -1,1 +1,0 @@
-../../vendors/yuescript-vim/ftplugin/yue.vim

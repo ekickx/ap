@@ -1,8 +1,0 @@
-import "nvim-web-devicons" as devicons
-
-devicons.setup
-  override:
-    yue:
-      icon: ""
-      color: "#b7ae8f"
-      name: "Yuescript"

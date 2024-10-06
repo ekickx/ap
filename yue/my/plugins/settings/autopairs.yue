@@ -1,9 +1,0 @@
-import "cmp"
-import "nvim-autopairs.completion.cmp" as cmp_pairs
-import "nvim-autopairs" as npairs
-
-npairs.setup!
-
--- insert `(` after select function or method item
-cmp.event::on "confirm_done",
-  cmp_pairs.on_confirm_done map_char: tex: ""

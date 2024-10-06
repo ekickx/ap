@@ -1,5 +1,0 @@
-import "toggleterm" as term
-
-term.setup
-  open_mapping: "<Leader>ot"
-  insert_mappings: false

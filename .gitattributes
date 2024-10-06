@@ -1,1 +1,2 @@
-*.yue linguist-language=MoonScript
+lua\my\*.lua linguist-generated=true
+lua\my\bootstrap.lua linguist-generated=false

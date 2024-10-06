@@ -1,6 +1,0 @@
-[submodule "vendors/yuescript-vim"]
-	path = vendors/yuescript-vim
-	url = https://github.com/pigpigyyy/yuescript-vim.git
-[submodule "vendors/nvim-moonwalk"]
-	path = vendors/nvim-moonwalk
-	url = https://github.com/gpanders/nvim-moonwalk
