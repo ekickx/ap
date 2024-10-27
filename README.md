@@ -1,1 +1,1 @@
-> Will mainly use [yuescript](yuescript.org) now
+> My neovim config in fennel
