@@ -1,4 +1,4 @@
--- :fennel:1711519894
+-- :fennel:1728214636
 local export = {}
 export["packadd!"] = function(package)
   return vim.cmd(("packadd " .. package))

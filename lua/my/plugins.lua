@@ -1,4 +1,4 @@
--- :fennel:1728189350
+-- :fennel:1729928318
 local _local_1_ = require("my.utils")
 local map_21 = _local_1_["map!"]
 local packadd_21 = _local_1_["packadd!"]
@@ -21,6 +21,10 @@ export.devicons = function()
   packadd_21("nvim-web-devicons")
   return setup("nvim-web-devicons")
 end
+export.emmet = function()
+  vim.g["user_emmet_leader_key"] = ","
+  return packadd_21("emmet-vim")
+end
 export.fundo = function()
   packadd_21("promise-async")
   packadd_21("nvim-fundo")
@@ -33,10 +37,29 @@ export.leap = function()
 end
 export.mini = function(modules)
   packadd_21("mini.nvim")
-  return setup("mini.pairs")
+  setup("mini.pairs")
+  return setup("mini.comment")
 end
 export.sandwich = function()
   return packadd_21("vim-sandwich")
+end
+export["smart-splits"] = function()
+  packadd_21("smart-splits.nvim")
+  local smart_splits = require("smart-splits")
+  smart_splits.setup({})
+  map_21("n", "<A-h>", smart_splits.resize_left)
+  map_21("n", "<A-j>", smart_splits.resize_down)
+  map_21("n", "<A-k>", smart_splits.resize_up)
+  return map_21("n", "<A-l>", smart_splits.resize_right)
+end
+export.substitute = function()
+  packadd_21("substitute.nvim")
+  local s = require("substitute")
+  s.setup()
+  map_21("n", "x", s.operator, "Substitute")
+  map_21("n", "xx", s.line, "Substitute")
+  map_21("n", "X", s.eol, "Substitute")
+  return map_21("x", "x", s.visual, "Substitute")
 end
 export.telescope = function()
   packadd_21("plenary.nvim")

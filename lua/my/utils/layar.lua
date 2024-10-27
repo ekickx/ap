@@ -1,4 +1,4 @@
--- :fennel:1712646608
+-- :fennel:1728214636
 local bufnr = vim.api.nvim_create_buf(false, true)
 print(bufnr)
 local layar = {}

@@ -17,6 +17,10 @@
   (packadd! :nvim-web-devicons)
   (setup :nvim-web-devicons))
 
+(fn export.emmet []
+  (tset vim.g :user_emmet_leader_key ",")
+  (packadd! :emmet-vim))
+
 (fn export.fundo []
   (packadd! :promise-async)
   (packadd! :nvim-fundo)
@@ -29,11 +33,30 @@
 
 (fn export.mini [modules]
   (packadd! :mini.nvim)
-  (setup :mini.pairs))
+  (setup :mini.pairs)
+  (setup :mini.comment))
   ;(setup :mini.surround))
 
 (fn export.sandwich []
   (packadd! :vim-sandwich))
+
+(fn export.smart-splits []
+  (packadd! :smart-splits.nvim)
+  (let [smart-splits (require :smart-splits)]
+    (smart-splits.setup {})
+    (map! :n :<A-h> smart-splits.resize_left)
+    (map! :n :<A-j> smart-splits.resize_down)
+    (map! :n :<A-k> smart-splits.resize_up)
+    (map! :n :<A-l> smart-splits.resize_right)))
+
+(fn export.substitute []
+  (packadd! :substitute.nvim)
+  (let [s (require :substitute)]
+    (s.setup)
+    (map! :n :x s.operator "Substitute")
+    (map! :n :xx s.line "Substitute")
+    (map! :n :X s.eol "Substitute")
+    (map! :x :x s.visual "Substitute")))
 
 (fn export.telescope []
   (packadd! :plenary.nvim)

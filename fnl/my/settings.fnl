@@ -12,6 +12,7 @@
         :termguicolors  true
         :colorcolumn    :80
         :cursorline     true
+        :cmdheight      0     ; hide cmd when not used
         :showmode       false
         :laststatus     3
         :number         true
@@ -40,6 +41,10 @@
         :shellcmdflag (if (pwsh?)
                         (.. "-NoLogo -NoProfile -ExecutionPolicy "
                             "RemoteSigned -Command "))
+        :shellquote   ""
+        :shellxquote  ""
+        :shellpipe    "2>&1 | tee '%s'"
+        :shellredir   ">'%s' 2>&1"
         ; Other
         :hidden       true
         :lazyredraw   true

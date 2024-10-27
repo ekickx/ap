@@ -1,4 +1,4 @@
--- :fennel:1728206146
+-- :fennel:1728214636
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 local _local_1_ = require("my.utils")

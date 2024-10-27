@@ -1,4 +1,4 @@
--- :fennel:1728189384
+-- :fennel:1730007666
 local function g_21(...)
   if (0 ~= (#{...} % 2)) then
     return nil, "Args is odd, it needs to be even"
@@ -19,6 +19,8 @@ load.devicons()
 load.fundo()
 load.leap()
 load.sandwich()
+load["smart-splits"]()
+load.substitute()
 load.telescope()
 load.mini()
 load.terminal()

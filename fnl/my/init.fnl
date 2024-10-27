@@ -29,6 +29,8 @@
   (load.fundo)
   (load.leap)
   (load.sandwich)
+  (load.smart-splits)
+  (load.substitute)
   (load.telescope)
   (load.mini)
   (load.terminal)
